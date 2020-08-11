@@ -120,7 +120,7 @@ public class SpawnerListener implements Listener {
 
                 // Check drop chance
                 // Will set false only if the player has the chance perm and if not >= random
-                if (!isMined(block)) {
+                if (isMined(block)) {
                     int rand = new Random().nextInt(100) + 1;
                     boolean canDrop = true;
                     for (int i = 0; i <= 100; i++) {
